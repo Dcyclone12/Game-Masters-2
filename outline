@@ -1,0 +1,63 @@
+Game class
+	Constructor 
+		Date
+		Player object(s) (instantiate at game instantiation)
+	Methods
+		Create
+		Winner
+		Average Score
+		Add Player (calls for data from the database)
+		Save (sends data to the database)
+		Game Lookup?
+
+Player class
+	Constructor
+		Name
+		Round Score Array
+	Methods
+		Total
+		Average
+		Highest Round
+		Lowest Round
+		
+ScoreCard Menu
+	New Game Button (opens Game Date form)
+	Previous Games Button (Opens Previous Games form)
+	Players Button (Opens Players Form)
+	Instructions (popup method with application rules)
+
+GameDate Form 
+	Instantiate Game (when form opens) (may require new opening application form)
+	Instructions (popup method with application rules)
+	Game Rules (popup method with game rules)
+	Player drop menus (Game.AddPlayer())
+	Total button (innumerates through players using Player.Total() to populate Total labels)
+	Within Total method we could check if all Round text boxes are populated and declare a winner? 
+	Save button (Game.Save())
+	Main Menu returns to the opening form (with or without saving the game?)
+	Previous Games opens the Previous Games form
+	Players opens Player Form
+	
+PreviousGames Form
+	Main Menu Button
+	Drop list for previous games (Method that draws from database)
+		Labels that are populated by method:
+			Game Date
+			Player Names
+			Total Score for each player
+			Method or attribute in database?:
+				Winner
+				Highest Score
+				Lowest Score
+				Average
+				
+Players Form
+	Main Menu Button
+	Drop list for players (Method that draws from database, same as on GameDate form?)
+		Labels that are populated:
+			Player Name
+			Total # of Games
+			Highest Score
+			Lowest Score
+			Average Score
+	Add Player Button (Method that uses text in New Player Name text box to create a player in the database)
