@@ -1,0 +1,13 @@
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\bin\Debug\MexicanTrain.exe.config
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\bin\Debug\MexicanTrain.exe
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\bin\Debug\MexicanTrain.pdb
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\obj\Debug\MexicanTrain.csproj.AssemblyReference.cache
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\obj\Debug\MexicanTrain.MainMenu.resources
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\obj\Debug\MexicanTrain.MTGame.resources
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\obj\Debug\MexicanTrain.MTPreviousGames.resources
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\obj\Debug\MexicanTrain.Players.resources
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\obj\Debug\MexicanTrain.Properties.Resources.resources
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\obj\Debug\MexicanTrain.csproj.GenerateResource.cache
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\obj\Debug\MexicanTrain.csproj.CoreCompileInputs.cache
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\obj\Debug\MexicanTrain.exe
+C:\Users\marka\source\repos\Scoreboard\MexicanTrain\obj\Debug\MexicanTrain.pdb
