@@ -1,0 +1,107 @@
+//To test the Player class and methods, I put the code into a console app so that I could easily see the output. below is the full code. This is the Player class under a different namespace with an added Main() to run as a test.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace MTPlayerTest
+{
+    //A class to represent a player and their scores
+    class Player
+    {
+        public string name { get; set; }
+        public int[] roundScores { get; set; }
+
+        //A constructor method
+        public Player(string name, int[] roundScores)
+        {
+            this.name = name;
+            this.roundScores = roundScores;
+        }
+
+
+        //A method to tally the total score from a player's array of scores by iterating through the array and adding them together
+        public int ScoreTotal()
+        {
+            int total = 0;
+            for (int i = 0; i < roundScores.Length; i++)
+            {
+                total = total + roundScores[i];
+            }
+            return total;
+        }
+
+        //A method to tally the player's highest scoring round by iterating through the array and choosing the higher as you go through
+        public int HighestRound()
+        {
+            int highestRound = 0;
+            int highestScore = 0;
+
+            for (int i = 0; i < roundScores.Length; i++)
+            {
+                if (roundScores[i] > highestScore)
+                {
+                    highestRound = i;
+                }
+            }
+            return highestRound;
+        }
+
+        //A method to tally the player's lowest scoring round by iterating through the array and choosing the lower as you go through
+        public int LowestRound()
+        {
+            int lowestRound = 0;
+            int lowestScore = roundScores[0];
+
+            for (int i = 0; i < roundScores.Length; i++)
+            {
+                if (roundScores[i] < lowestScore)
+                {
+                    lowestRound = i;
+                }
+            }
+            return lowestRound;
+        }
+
+        //A method to calculate the player's average score using the ScoreTotal method and the # of rounds based on the length of the array
+        public int AverageRoundScore()
+        {
+            int averageRound = ScoreTotal() / roundScores.Length;
+            return averageRound;
+        }
+
+        //A method to validate user names
+        public static bool IsUsernameValid(string username)
+        {
+            //Valid usernames must contain only alphanumeric characters and underscores
+            string pattern = @"^[a-zA-Z0-9_]{3,20}$";
+            return Regex.IsMatch(pattern, username);
+        }
+        static void Main()
+        {
+            // declaring an array that would be created from the textboxes for that player's rounds (eg: int[13] player1scores = [player1round0.Text, player1round2.Text..etc]
+            int[] player1scores = { 13, 10, 28, 28, 91, 67, 0, 42, 32, 22, 13, 0, 26 };
+            int[] player2scores = { 0, 49, 4, 0, 6, 32, 14, 58, 0, 10, 26, 33, 18 };
+            int[] player3scores = { 36, 0, 0, 41, 0, 0, 38, 0, 42, 0, 0, 29, 0 };
+
+            //creating a list of test players
+            Player player1 = new Player("Mark", player1scores);
+            Player player2 = new Player("Frances", player2scores);
+            Player player3 = new Player("Rebecca", player3scores);
+
+            Console.WriteLine(player1.name + " had a total score of " + player1.ScoreTotal() + " with an average round of " + player1.AverageRoundScore() + ".");
+            Console.WriteLine("Their highest round had a score of " + player1.HighestRound() + " and their lowest round had a score of " + player1.LowestRound() + ".");
+            Console.WriteLine();
+            Console.WriteLine(player2.name + " had a total score of " + player2.ScoreTotal() + " with an average round of " + player3.AverageRoundScore() + ".");
+            Console.WriteLine("Their highest round had a score of " + player2.HighestRound() + " and their lowest round had a score of " + player2.LowestRound() + ".");
+            Console.WriteLine();
+            Console.WriteLine(player3.name + " had a total score of " + player3.ScoreTotal() + " with an average round of " + player3.AverageRoundScore() + ".");
+            Console.WriteLine("Their highest round had a score of " + player3.HighestRound() + " and their lowest round had a score of " + player3.LowestRound() + ".");
+            Console.WriteLine();
+
+        }
+    }
+
+}
