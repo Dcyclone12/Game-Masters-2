@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MexicanTrain
 {
-    public class Player
+    public class PlayerClass
     {
         public string name { get; set; }
         public int[] roundScores { get; set; }
