@@ -10,7 +10,13 @@ namespace MexicanTrain
     {
         public string name { get; set; }
         public int[] roundScores { get; set; }
-    
+
+        //A constructor method
+        public Player(string name, int[] roundScores) 
+        {
+            this.name = name;
+            this.roundScores = roundScores;
+        }   
     
         //A method to tally the total score from a player's array of scores by iterating through the array and adding them together
         public int ScoreTotal()
